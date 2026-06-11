@@ -25,6 +25,7 @@ client = ApifyClient(os.getenv("APIFY_API_TOKEN"))
 # you are billed per review returned. Pass `contributorIds` to profile several.
 run_input = {
     "contributorId": "107022004965696773221",  # a Google Maps contributor ID
+    "hl": "en",                     # two-letter language code
     "maxResultsPerContributor": 10,
 }
 
