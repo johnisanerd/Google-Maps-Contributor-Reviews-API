@@ -19,8 +19,8 @@ Pull a Google Maps contributor's review history as structured JSON. Give the API
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/johnisanerd/Apify-Google-Maps-Contributor-Reviews-API.git
-   cd Apify-Google-Maps-Contributor-Reviews-API
+   git clone https://github.com/johnisanerd/Google-Maps-Contributor-Reviews-API.git
+   cd Google-Maps-Contributor-Reviews-API
    ```
 
 2. **Install dependencies with UV**
@@ -264,4 +264,4 @@ More help: https://docs.apify.com/platform/integrations/mcp
 
 *Use the Google Maps Contributor Reviews API to vet reviewers and detect review fraud in your product or AI agent.*
 
-Last Updated: 2026.06.11
+Last Updated: 2026.06.14
