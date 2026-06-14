@@ -305,4 +305,4 @@ More help: https://docs.apify.com/platform/integrations/mcp
 
 *Use the Google Maps Contributor Reviews API to vet reviewers and detect review fraud in your product or AI agent.*
 
-Last Updated: 2026.06.14
+Last Updated: 2026.06.15
