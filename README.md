@@ -106,24 +106,65 @@ For a runnable batch script, see `google-maps-contributor-reviews-api-batch-exam
 
 ## Output Format
 
-Each item in the dataset is one review:
+Each item in the dataset is one review, with the reviewer's profile attached:
 
 ```json
 {
   "result_type": "review",
   "contributor_id": "107022004965696773221",
   "position": 1,
+  "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21v...",
   "contributor_name": "Matt Moeini",
   "contributor_level": 5,
   "contributor_local_guide": true,
   "contributor_points": 952,
+  "contributor_contributions": { "reviews": 32, "ratings": 1, "photos": 27, "videos": 7, "answers": 124 },
+  "contributor_thumbnail": "https://lh3.googleusercontent.com/...",
   "rating": 5,
   "snippet": "Great little spot, the service was excellent ...",
   "date": "2 months ago",
+  "likes": 0,
   "place_info": { "title": "Le Petit Marcel", "address": "2914 N Broadway, Chicago, IL 60657", "type": "Restaurant" },
-  "link": "https://www.google.com/maps/..."
+  "images": [ { "title": "Le Petit Marcel", "thumbnail": "https://lh3.googleusercontent.com/..." } ],
+  "details": { "food": 5, "service": 5, "atmosphere": 5, "recommended_dishes": "Salmon Wellington" },
+  "link": "https://www.google.com/maps/...",
+  "fetched_at": "2026-06-14T00:00:00Z"
 }
 ```
+
+### Field reference
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `result_type` | `str` | Always `review`. |
+| `contributor_id` | `str` | The reviewer this row belongs to. |
+| `position` | `int` | Rank of this review within the reviewer's returned reviews. |
+| `review_id` | `str` | Stable identifier for the review. |
+| `contributor_name` | `str` | The reviewer's display name. |
+| `contributor_level` | `int` | Local Guide level. |
+| `contributor_local_guide` | `bool` | Whether the reviewer is a Local Guide. |
+| `contributor_points` | `int` | The reviewer's Local Guide points. |
+| `contributor_contributions` | `obj` | Counts: `reviews`, `ratings`, `photos`, `videos`, `answers`, and more. |
+| `contributor_thumbnail` | `str` | The reviewer's profile photo URL. |
+| `rating` | `int` | The star rating for this review. |
+| `snippet` | `str` | The review text. |
+| `date` | `str` | Relative date Google shows (e.g. `2 months ago`). |
+| `likes` | `int` | Likes on the review. |
+| `place_info` | `obj` | The place reviewed: `title`, `address`, `type`, coordinates. |
+| `images` | `list` | Photos attached to the review (`title`, `thumbnail`). |
+| `details` | `obj` | Sub-ratings and tags when present (e.g. `food`, `service`, `atmosphere`, `recommended_dishes`). |
+| `response` | `obj` | The business owner's response, when present. |
+| `link` | `str` | Link to the review on Google Maps. |
+| `fetched_at` | `str` | ISO 8601 timestamp of when the row was fetched. |
+
+## Featured Tasks
+
+Ready-to-run examples on the Apify Store, each targeting a specific use case:
+
+- [Get a Google Maps Reviewer's Full Review History](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/get-a-google-maps-reviewer-s-full-review-history?fpr=9n7kx3)
+- [Audit a Google Maps Local Guide's Reviews](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/audit-a-google-maps-local-guide-s-reviews?fpr=9n7kx3)
+- [Export a Google Reviewer's Reviews as JSON](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/export-a-google-reviewer-s-reviews-as-json?fpr=9n7kx3)
+- [Vet a Google Reviewer: Spot Fake-Review Signals](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/vet-a-google-reviewer-spot-fake-review-signals?fpr=9n7kx3)
 
 ---
 
