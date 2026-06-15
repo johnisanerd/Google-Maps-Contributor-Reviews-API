@@ -165,6 +165,7 @@ Ready-to-run examples on the Apify Store, each targeting a specific use case:
 - [Audit a Google Maps Local Guide's Reviews](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/audit-a-google-maps-local-guide-s-reviews?fpr=9n7kx3)
 - [Export a Google Reviewer's Reviews as JSON](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/export-a-google-reviewer-s-reviews-as-json?fpr=9n7kx3)
 - [Vet a Google Reviewer: Spot Fake-Review Signals](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/vet-a-google-reviewer-spot-fake-review-signals?fpr=9n7kx3)
+- [Export Google Maps Reviews to CSV](https://apify.com/johnvc/google-maps-contributor-reviews-api/examples/export-google-maps-reviews-to-csv?fpr=9n7kx3)
 
 ---
 
